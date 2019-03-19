@@ -16,7 +16,7 @@ Prototipo de tablón de tareas al estilo Kanban emulando un clon de Trello usand
 - [ ] Proceso para recuperar una tarea
 - [ ] Proceso para modificar una tarea
 
-Se consume la API Rest predefinada.
+Se consume la API Rest predefinida.
 
 
 
