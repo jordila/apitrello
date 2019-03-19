@@ -25,6 +25,9 @@ Se consume la API Rest predefinida.
 - Para el [procesado de tokens (JWT), JonathanMH](https://jonathanmh.com/example-json-web-tokens-vanilla-javascript/)
 
 
+### Licencia MIT 
+
+
 
 
 
