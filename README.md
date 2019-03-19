@@ -1,4 +1,4 @@
-# APItrello login
+# APItrello
 
 Prototipo de tablón de tareas al estilo Kanban emulando un clon de Trello usando JavaScript, permitiendo las siguientes funcionalidades (que iremos marcando a medida que estén implementadas) :
 
