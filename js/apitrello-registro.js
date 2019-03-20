@@ -1,4 +1,4 @@
-// basado en el jwt-vanilla.js de JonathanMH :
+// basado en el jwt-vanilla.js de JonathanMH 
 // à la https://jonathanmh.com/example-json-web-tokens-vanilla-javascript/
 // vamos a  guardar el token recibido de la APItrello en nuestro navegador localStorage
 
@@ -15,17 +15,19 @@ function getUser() {
   xhr.open('POST', loginUrl, true);
   xhr.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
   xhr.addEventListener('load', function() {
-      var responseObject = JSON.parse(JSON.stringify(this.response));
+      var responseObject = JSON.parse(this.response);
       /*    console.log(responseObject); */
-      console.log('creamos usuario / contraseña ');
+      console.log('creamos usuari@ / contraseña ');
       console.log(responseObject);
-      localStorage.setItem('user', responseObject);
+      /* recuperar userID de la respuesta AJAX de login
+      /* var userID = JSON.parse();
+      /* localStorage.setItem('user', responseObject);
       /* para recuperarlo a posteriori, localStorage.setItem('token'); */
-    /* if (responseObject) {
-      tokenElement.innerHTML = responseObject;
+      if (responseObject) {
+	 
     } else {
-      tokenElement.innerHTML = "No se recibió el token de autorización por parte de la API";
-    }*/
+          /*  userIdElement.innerHTML = "No se recibió el token de autorización por parte de la API"; */
+    }
   });
 
   var sendObject = JSON.stringify({username: user, password: password});
