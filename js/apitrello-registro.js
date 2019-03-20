@@ -19,9 +19,11 @@ function getUser() {
       /*    console.log(responseObject); */
       console.log('creamos usuari@ / contraseña ');
       console.log(responseObject);
+      console.log('... y le user_Id es : ');
+      /* var userID */
+      console.log(responseObject.id);
+      localStorage.setItem('userId', responseObject.id);
       /* recuperar userID de la respuesta AJAX de login
-      /* var userID = JSON.parse();
-      /* localStorage.setItem('user', responseObject);
       /* para recuperarlo a posteriori, localStorage.setItem('token'); */
       if (responseObject) {
 	 
