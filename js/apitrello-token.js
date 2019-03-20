@@ -11,35 +11,24 @@ function getToken() {
   var tokenElement = document.getElementById('token');
   var user = userElement.value;
   var password = passwordElement.value;
-    // veamos cosificando username/passwd , para luego stringifycarlo ?
-    //
-    let credentials = {
-	username: "prueba",
-	password: "prueba"
-    };
-
-    
 
   xhr.open('POST', loginUrl, true);
   xhr.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
   xhr.addEventListener('load', function() {
-  var responseObject = JSON.parse(JSON.stringify(this.response));
-    console.log(responseObject);
-      if (responseObject) {
+      var responseObject = JSON.parse(JSON.stringify(this.response));
+      console.log(responseObject);
+      var token = XMLHttpRequest.responseText;
+            console.log(token);
+    if (responseObject) {
       tokenElement.innerHTML = responseObject;
     } else {
-      tokenElement.innerHTML = "Token no recibido";
+      tokenElement.innerHTML = "No se recibió el token de autorización por parte de la API";
     }
   });
 
-  //  var sendObject = JSON.stringify({ username: username, password: password });
+  var sendObject = JSON.stringify({username: user, password: password});
 
-//    let json = JSON.stringify(credentials);
-
-
-var sendObject = JSON.stringify(credentials);  
-
-  console.log('Vamos a hacer la petición', sendObject);
+  console.log('vamos a enviar la petición:', sendObject);
 
   xhr.send(sendObject);
 }
