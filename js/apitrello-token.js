@@ -16,9 +16,11 @@ function getToken() {
   xhr.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
   xhr.addEventListener('load', function() {
       var responseObject = JSON.parse(JSON.stringify(this.response));
+      /*    console.log(responseObject); */
+      console.log('almacenamos el JWtoken recibido en la variable localStorage "token". Ojo, se acumulan sucesivamente en un Array de tokens recibidos ');
       console.log(responseObject);
-      var token = XMLHttpRequest.responseText;
-            console.log(token);
+      localStorage.setItem('token', responseObject);
+      /* para recuperarlo a posteriori, localStorage.setItem('token'); */
     if (responseObject) {
       tokenElement.innerHTML = responseObject;
     } else {
