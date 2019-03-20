@@ -20,7 +20,7 @@ function getToken() {
       console.log('almacenamos el JWtoken recibido en la variable localStorage "token". Ojo, se acumulan sucesivamente en un Array de tokens recibidos ');
       console.log(responseObject);
       localStorage.setItem('token', responseObject);
-      /* para recuperarlo a posteriori, localStorage.setItem('token'); */
+      /* para recuperarlo a posteriori, localStorage.setItem('userId'); */
     if (responseObject) {
       tokenElement.innerHTML = responseObject;
     } else {
