@@ -4,9 +4,9 @@ Prototipo de tablón de tareas al estilo Kanban emulando un clon de Trello usand
 
 - [ ] Registro de usuarios
 
-- [ ] Login de usuarios
+- [x] Login de usuarios
 
-- [ ] Almacenamiento del Token (JWT)
+- [x] Almacenamiento del Token (JWT)
 
 - [ ] Listado de tareas
 
