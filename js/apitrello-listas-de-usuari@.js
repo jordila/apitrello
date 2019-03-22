@@ -3,8 +3,8 @@
 // vamos a  guardar el token recibido de la APItrello en nuestro navegador localStorage
 
 // make the request to the login endpoint
-function getUser() {
-  var loginUrl = "http://apitrello.herokuapp.com/users";
+function getLists() {
+  var loginUrl = "http://apitrello.herokuapp.com/lists";
   var xhr = new XMLHttpRequest();
   var userElement = document.getElementById('username');
   var passwordElement = document.getElementById('password');
@@ -17,16 +17,15 @@ function getUser() {
   xhr.addEventListener('load', function() {
       var responseObject = JSON.parse(this.response);
       /*    console.log(responseObject); */
-      console.log('creamos usuari@ / contraseña ');
       console.log(responseObject);
       console.log('... y le user_Id es : ');
       /* var userID */
-      console.log(responseObject.id);
+      /* console.log(responseObject.id);
       localStorage.setItem('userId', responseObject.id);
       /* recuperar userID de la respuesta AJAX de login
       /* para recuperarlo a posteriori, localStorage.setItem('token'); */
       if (responseObject) {
-	   
+	 
     } else {
           /*  userIdElement.innerHTML = "No se recibió el token de autorización por parte de la API"; */
     }
@@ -36,5 +35,8 @@ function getUser() {
 
   console.log('vamos a enviar la petición:', sendObject);
 
+  /* agregamos la cabecera de la xhr ?!  à la https://plainjs.com/javascript/ajax/send-ajax-get-and-post-requests-47/*/  
+  //  XMLHttpRequest.setRequestHeader(header, value);
+  xhr.setRequestHeader("Authorization", "BEARER " + token ); 
   xhr.send(sendObject);
 }
