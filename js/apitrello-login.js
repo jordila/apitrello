@@ -22,9 +22,11 @@ function getToken() {
       localStorage.setItem('token', responseObject);
       /* para recuperarlo a posteriori, localStorage.setItem('userId'); */
     if (responseObject) {
-      tokenElement.innerHTML = responseObject;
+        tokenElement.innerHTML = responseObject;
+        console.log('Logueado: vamos al tablón de tareas !');
+        alert('Logueado: vamos al tablón de tareas !');
     } else {
-      tokenElement.innerHTML = "No se recibió el token de autorización por parte de la API";
+          tokenElement.innerHTML = "No se recibió el token de autorización por parte de la API";
     }
   });
 
