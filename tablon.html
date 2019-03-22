@@ -7,16 +7,18 @@
     <body>
 	<h2> Tablón de tareas</h2>
 	    <div class="input">
-	    <label for="username">usuario:</label>
-	    <input id="username">
-	    <label for="password">contraseña:</label>
-	    <input id="password">
-	    <button onclick="addList()">Registrar</button>
+	    <label for="lista">nombre de la lista:</label>
+	    <input id="lista">
+	    <button onclick="crearLista()">Guardar</button>
+	    <script>
+  	         console.log('Guardar la lista de tareas !');
+   	         alert('Guardar la lista de tareas (AJAX) !');
+	    </script>
 	</div>
 	</div>
 	<p><i> Una vez hecho 'login', ya puedes gestionar tus listas de tareas : </i></p>
  	<div id="board"></div> 
 	<div id="tasks"></div>
-	<!-- 	<script src="js/apitrello-registro.js"></script>--->
+ 	<script src="js/apitrello-crear-lista.js"></script>
     </body>
 </html>
