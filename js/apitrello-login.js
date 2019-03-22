@@ -25,6 +25,7 @@ function getToken() {
         tokenElement.innerHTML = responseObject;
         console.log('Logueado: vamos al tablón de tareas !');
         alert('Logueado: vamos al tablón de tareas !');
+	location = 'tablon.html';
     } else {
           tokenElement.innerHTML = "No se recibió el token de autorización por parte de la API";
     }
